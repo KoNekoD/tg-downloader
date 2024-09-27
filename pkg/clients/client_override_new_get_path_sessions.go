@@ -4,10 +4,11 @@ import (
 	"context"
 	"github.com/gotd/td/session"
 	"github.com/gotd/td/session/tdesktop"
+	"main/pkg/env"
 )
 
-func getPathSessions(ctx context.Context) []*PathSession {
-	accounts, err := tdesktop.Read(path, nil)
+func getPathSessions(ctx context.Context, e *env.Environment) []*PathSession {
+	accounts, err := tdesktop.Read(e.TdataPath, nil)
 	if err != nil {
 		return nil
 	}
