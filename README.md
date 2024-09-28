@@ -1,19 +1,19 @@
 # tg-downloader
 
-`tg-downloader` is a Go-based utility designed to clear all media from channels in Telegram. 
+`tg-downloader` is a Go-based utility designed to downloading all media from channels in Telegram. 
 
 > [!NOTE]
-> This project was inspired by the principles of [Copyism](https://en.wikipedia.org/wiki/Missionary_Church_of_Kopimism), a movement that advocates for the free sharing and replication of information. The author, motivated by these ideals, created this program to manage and clear digital content efficiently.
+> This project was inspired by the principles of [Copyism](https://en.wikipedia.org/wiki/Missionary_Church_of_Kopimism), a movement that advocates for the free sharing and replication of information. The author, motivated by these ideals, created this program to manage and download digital content efficiently.
 
 ## Overview
 
-`tg-downloader` automates the process of clearing all media from specific Telegram channels. It works by interfacing with the Telegram API, using credentials and configuration provided via a `.env` file. The application does not require command-line arguments, making it simple to set up and use.
+`tg-downloader` automates the process of downloading all media from specific Telegram channels. It works by interfacing with the Telegram API, using credentials and configuration provided via a `.env` file. The application does not require command-line arguments, making it simple to set up and use.
 
 ### Features:
 - Downloads all media from specified Telegram channels.
 - Utilizes a `.env` file for configuration, making setup straightforward.
 - Supports multiple channels.
-- Efficient, automated process for media clearance on errors.
+- Efficient, automated process for media removal on errors.
 
 ## Setup
 
@@ -47,7 +47,7 @@ DEVICE="Honor 50"
 - **APP_HASH**: Your Telegram API hash key.
 - **TDATA_PATH**: Path to your Telegram Desktop `tdata` folder. This folder contains your user session data.
 - **NEEDED_USER_ID**: Your Telegram user ID.
-- **CHANNELS_IDS**: Comma-separated list of Telegram channel IDs from which media should be cleared.
+- **CHANNELS_IDS**: Comma-separated list of Telegram channel IDs from which media should be downloaded.
 - **DEVICE**: Optional name for the device being used (can be customized).
 
 ## Usage
@@ -70,7 +70,7 @@ DEVICE="Honor 50"
    ./tg_downloader
    ```
 
-The program will automatically load your configuration from the `.env` file and clear media from the specified Telegram channels.
+The program will automatically load your configuration from the `.env` file and download media from the specified Telegram channels.
 
 ## Inspiration
 
