@@ -1,19 +1,19 @@
-package clients
+package providers
 
 import (
 	"context"
 	"github.com/gotd/td/session"
 	"github.com/gotd/td/session/tdesktop"
-	"main/pkg/env"
+	"main/pkg/dtos"
 )
 
-func getPathSessions(ctx context.Context, e *env.Environment) []*PathSession {
-	accounts, err := tdesktop.Read(e.TdataPath, nil)
+func ProvidePathSessions(ctx context.Context, e *dtos.Config) []*dtos.PathSession {
+	accounts, err := tdesktop.Read(e.TDataPath, nil)
 	if err != nil {
 		return nil
 	}
 
-	var pathSessions []*PathSession
+	var pathSessions []*dtos.PathSession
 	for _, account := range accounts {
 		data, err := session.TDesktopSession(account)
 		if err != nil {
@@ -29,7 +29,7 @@ func getPathSessions(ctx context.Context, e *env.Environment) []*PathSession {
 			continue
 		}
 
-		pathSessions = append(pathSessions, &PathSession{acc: account, sMem: sMem})
+		pathSessions = append(pathSessions, &dtos.PathSession{Acc: account, SMem: sMem})
 	}
 
 	return pathSessions

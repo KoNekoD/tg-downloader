@@ -1,4 +1,4 @@
-package clients
+package dtos
 
 import (
 	"github.com/gotd/td/session"
@@ -6,6 +6,6 @@ import (
 )
 
 type PathSession struct {
-	acc  tdesktop.Account
-	sMem *session.StorageMemory
+	Acc  tdesktop.Account
+	SMem *session.StorageMemory
 }

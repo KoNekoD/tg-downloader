@@ -3,14 +3,14 @@ package main
 import (
 	"context"
 	"main/pkg/clients"
-	"main/pkg/env"
+	"main/pkg/factories"
 	"sync"
 )
 
 func run(ctx context.Context, wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	e := env.NewEnvironment()
+	e := factories.NewConfig()
 
 	client := clients.NewClientOverride(ctx, e)
 

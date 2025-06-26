@@ -17,7 +17,7 @@
 
 ## Setup
 
-To configure `tg-downloader`, create a `resources/.env` file in the root of the project directory, using the structure provided in the `resources/.env.example` file. This file will be automatically loaded by the program when it runs.
+To configure `tg-downloader`, create a `.env` file in the root of the project directory, using the structure provided in the `.env.example` file. This file will be automatically loaded by the program when it runs.
 
 ### Example `.env` file
 

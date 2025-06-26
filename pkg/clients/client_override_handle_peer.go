@@ -22,7 +22,7 @@ func (c *ClientOverride) handlePeer(ctx context.Context, peerClass tg.InputPeerC
 		}
 
 		if channel.ChannelID == id {
-			fmt.Printf("channel found: %d\n", id)
+			fmt.Printf("Channel found: %d\n", id)
 			c.downloadChannelFiles(ctx, channel)
 		}
 	}

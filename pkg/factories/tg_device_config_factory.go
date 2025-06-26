@@ -1,4 +1,4 @@
-package clients
+package factories
 
 import (
 	"github.com/gotd/td/telegram"
