@@ -6,7 +6,8 @@ import (
 )
 
 func (c *ClientOverride) RunFunc(ctx context.Context) error {
-	dialogsIter := query.NewQuery(c.API()).GetDialogs().Iter()
+	// TODO: Cache for getDialogs
+	dialogsIter := query.NewQuery(c.API()).GetDialogs().BatchSize(100).Iter()
 
 	for dialogsIter.Next(ctx) {
 		if c.needStop() {
