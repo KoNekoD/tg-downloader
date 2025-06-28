@@ -15,6 +15,8 @@ func (c *ClientOverride) handleHistoryItem(ctx context.Context, getHistoryIter *
 
 	msg := getHistoryIter.Value()
 
+	fmt.Printf("message: %d\n", msg.Msg.GetID())
+
 	file, ok := msg.File()
 	if !ok {
 		return
